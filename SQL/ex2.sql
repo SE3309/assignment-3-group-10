@@ -117,7 +117,7 @@ CREATE TABLE Movie (
     releaseDate DATE NOT NULL,
     duration INT,
     synopsis TEXT,
-    genre VARCHAR(50),
+    genre VARCHAR(100),
     PRIMARY KEY (title, releaseDate)
 );
 DESCRIBE Movie;
