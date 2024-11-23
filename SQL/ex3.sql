@@ -25,3 +25,14 @@ password = VALUES(password),
 watchlistUpdateDate = VALUES(watchlistUpdateDate);
 
 SELECT * FROM User;
+
+
+--INSERT with Subquery
+
+INSERT INTO UserFollowers (username, followerUsername)
+VALUES (
+    (SELECT username FROM User WHERE email = 'aadesspb@yahoo.com'),
+    (SELECT username FROM User WHERE email = 'aaimerpb@outlook.com')
+);
+
+SELECT * FROM UserFollowers;
